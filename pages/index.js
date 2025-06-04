@@ -1,16 +1,20 @@
 import Link from 'next/link'
 
-const Index = () => (
-    <div>
-        <p>Hello World</p>
-        <Link href="/secondPage">
-        <a>Ir para segunda Página</a>
+const ListLink = (props) => (
+    <li>
+        <Link href={`/secondPage?title=${props.title}`}>
+            <a>{props.title}</a>
         </Link>
-        <br />
-        <Link href="/nome">
-        <a>Ir para segunda Nome</a>
-        </Link>
-    </div>
+    </li>
 )
 
-export default Index
+export default () => (
+    <div>
+        <h1>Home Page</h1>
+        <ul>
+            <ListLink title="Cursos" />
+            <ListLink title="Contatos" />
+            <ListLink title="Monitoria" />
+        </ul>
+    </div>
+)

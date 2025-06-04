@@ -1,17 +1,12 @@
 import Link from 'next/link'
 
-const SecondPage = () => (
+const SecondPage = ({query}) => (
     <div>
-        <p>Goodbye World</p>
-        <Link href="/">
-        <a>Retornar ao Index</a>
-        </Link>
-        <br />
-        <Link href="/nome">
-        <a>Ir para nome</a>
-        </Link>
-        
+        <h1>{query.title}</h1>
+        <p>Qualquer coisa fixa na página</p>
     </div>
 )
+
+SecondPage.getInitialProps = ({query}) => ({query}) 
 
 export default SecondPage
