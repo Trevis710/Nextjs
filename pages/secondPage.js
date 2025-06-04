@@ -4,7 +4,11 @@ const SecondPage = () => (
     <div>
         <p>Goodbye World</p>
         <Link href="/">
-        <p>Retornar ao Index</p>
+        <a>Retornar ao Index</a>
+        </Link>
+        <br />
+        <Link href="/nome">
+        <a>Ir para nome</a>
         </Link>
         
     </div>
