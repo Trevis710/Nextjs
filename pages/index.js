@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const ListLink = (props) => (
     <li>
-        <Link href={`/secondPage?title=${props.title}`}>
+        <Link as={`/p/${props.title}`} href={`/secondPage?title=${props.title}`}>
             <a>{props.title}</a>
         </Link>
     </li>
